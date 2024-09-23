@@ -224,33 +224,30 @@ def main():
     # Título e Subtítulo
     st.title("Sistema de Detecção e Reconhecimento Facial Otimizado")
     st.markdown("""
-    **Bem-vindo ao nosso sistema avançado de detecção e reconhecimento facial!**
-    
-    Esta ferramenta foi desenvolvida para **identificar e reconhecer rostos** em vídeos de forma rápida e precisa. Utilizando as mais recentes tecnologias de visão computacional e aprendizado de máquina, o sistema oferece uma experiência eficiente para diversas aplicações, como segurança, análise de público e muito mais.
+    Esta ferramenta foi desenvolvida para **identificar e reconhecer rostos** em vídeos de forma rápida e precisa
     """)
     
     # Descrição das Funcionalidades
     st.markdown("""
     ### **Funcionalidades Principais**
-    - **Detecção de Rostos:** Utiliza a biblioteca `MTCNN` para identificar a localização de rostos em cada quadro do vídeo.
-    - **Reconhecimento Facial:** Com base nas codificações geradas pelo `face_recognition`, o sistema compara e identifica rostos conhecidos.
-    - **Processamento Otimizado:** Configurações ajustáveis para equilibrar entre velocidade e precisão, incluindo redimensionamento de quadros e pular quadros para acelerar o processamento.
-    - **Interface Intuitiva:** Desenvolvido com `Streamlit`, oferecendo uma interface amigável para upload e visualização de vídeos processados.
-    - **Download Fácil:** Após o processamento, o vídeo com as identificações é exibido e pode ser baixado diretamente pela interface.
+    - **Detecção de Rostos:** Utiliza `MTCNN` para identificar a localização de rostos em cada quadro do vídeo.
+    - **Reconhecimento Facial:** Sistema compara e identifica rostos conhecidos.
+    - **Processamento Otimizado:** Configurações ajustáveis para equilibrar velocidade e precisão.
+    - **Interface Intuitiva:** Desenvolvido com `Streamlit`.
+    - **Download:** Após o processamento, o vídeo pode ser baixado diretamente pela interface.
     """)
     
     # Instruções de Uso
     st.markdown("""
     ### **Como Utilizar**
     1. **Carregar o Vídeo:**
-       - Clique no botão de upload e selecione um vídeo nos formatos `mp4`, `avi` ou `mov`.
+       - Clique no botão de upload e selecione um vídeo
     2. **Ajustar as Configurações:**
-       - **Fator de Redimensionamento de Quadro:** Reduza a resolução dos quadros para acelerar o processamento. Valores menores aumentam a velocidade, mas podem reduzir a precisão.
+       - **Fator de Redimensionamento de Quadro:** Reduza a resolução dos quadros para acelerar o processamento.
        - **Tamanho do Lote:** Defina o número de quadros a serem processados antes de atualizar a barra de progresso.
-       - **Pular Quadros:** Especifique quantos quadros pular entre os processados. Por exemplo, `1` significa processar um quadro a cada dois.
-       - **Tolerância de Reconhecimento:** Ajuste o quão estrita a correspondência deve ser para considerar uma face como conhecida. Valores menores aumentam a precisão.
-    3. **Processar o Vídeo:**
-       - Após ajustar as configurações, aguarde enquanto o sistema processa o vídeo. A barra de progresso indicará o andamento.
+       - **Pular Quadros:** Especifique quantos quadros pular entre os processados.
+       - **Tolerância de Reconhecimento:** Ajuste o quão estrita a correspondência deve ser para considerar uma face como conhecida.
+    3. **Processar o Vídeo**
     4. **Visualizar e Baixar:**
        - Uma vez concluído, o vídeo processado será exibido na interface e você poderá baixá-lo diretamente.
     """)
